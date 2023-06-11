@@ -1,6 +1,7 @@
 import static OrdenaVetor.Buscar.buscarElemento;
 import static OrdenaVetor.Exibir.exibirVetor;
 import static OrdenaVetor.Ordenar.ordenarVetor;
+import static OrdenaVetor.Verificar.verificarVetor;
 
 public class Main {
     /**
@@ -9,7 +10,24 @@ public class Main {
      * @param args os argumentos de linha de comando
      */
     public static void main(String[] args) {
-        String[] vetor = {"Titanic", "Avatar", "O Poderoso Chefão", "Interestelar", "Clube da Luta", "Pulp Fiction", "Matrix", "A Origem", "O Senhor dos Anéis", "Os Vingadores"};
+        String[] vetor = {
+                "Titanic",
+                "Avatar",
+                "O Poderoso Chefão",
+                "Interestelar",
+                "Clube da Luta",
+                "Pulp Fiction",
+                "Matrix",
+                "A Origem",
+                "O Senhor dos Anéis",
+                "Os Vingadores",
+                "Gato de botas",
+                "Tropa de elite",
+                "O Auto da Compadecida",
+                "Cidade de Deus",
+                "Homem-Aranha: Através do Aranhaverso",
+                "Me Chame Pelo Seu Nome"
+        };
 
         System.out.println("Vetor antes da ordenação: ");
         exibirVetor(vetor);
@@ -20,18 +38,9 @@ public class Main {
         exibirVetor(vetor);
 
         String filmeBuscado = "Titanic";
-        if (buscarElemento(vetor, filmeBuscado)) {
-            System.out.println("Filme \"" + filmeBuscado + "\" encontrado.");
-        } else {
-            System.out.println("Filme \"" + filmeBuscado + "\" não encontrado.");
-        }
-
-        filmeBuscado = "Pulp Fiction";
-        if (buscarElemento(vetor, filmeBuscado)) {
-            System.out.println("Filme \"" + filmeBuscado + "\" encontrado.");
-        } else {
-            System.out.println("Filme \"" + filmeBuscado + "\" não encontrado.");
-        }
+        verificarVetor(vetor, filmeBuscado);
+        filmeBuscado = "Lorax";
+        verificarVetor(vetor, filmeBuscado);
     }
 
 }
